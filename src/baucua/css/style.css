@@ -1,0 +1,196 @@
+@font-face {
+    font-family: font-pony;
+    src: url(./font/Pony.ttf);
+}
+
+body {
+    background-color: #28A74C !important;
+    font-size: 16px !important;
+    line-height: 1;
+}
+
+#bau-cua {
+    font-family: font-pony;
+}
+
+.logo {
+    display: block;
+    width: 350px;
+    height: auto;
+    margin: 0.5rem auto;
+}
+
+/* Diem Thuong Component */
+.diem-thuong-container p {
+    font-size: 1.25rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #FCC113;
+}
+
+.diem-thuong-container p span {
+    color: #27a947;
+}
+
+/* .nut-reset {
+    display: block !important;
+    margin: 1rem auto;
+    font-size: 1.125rem !important;
+} */
+
+.tro-choi-container {
+    width: 80%;
+    margin: 0.5rem auto 0 !important;
+}
+
+/* Danh sach o cuoc */
+
+.o-cuoc-container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.o-cuoc-container img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.o-cuoc-container p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 5px;
+    margin: 0.5rem 0 0 !important;
+    font-size: 1.125rem;
+    background-color: #FCC113;
+    text-align: center;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.o-cuoc-container button {
+    padding: 4px 8px;
+}
+
+
+.o-cuoc-container button:active {
+    transform: scale(1.2);
+}
+
+/* Dia bau cua */
+.dia-bau-cua-container {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    margin-left: 5rem;
+}
+
+.dia-bau-cua-container .dia {
+    width: 100%;
+    height: auto;
+}
+
+.dia-bau-cua-container .danh-sach-xuc-xac {
+    position: absolute;
+    top: 45%;
+    left: 54%;
+    transform: translate(-52%, -50%);
+}
+
+.dia-bau-cua-container .xuc-xac {
+    width: 50px;
+    height: 50px;
+}
+
+.dia-bau-cua-container .nut-game {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+    padding: 0 !important;
+    transition: all 0.005s;
+}
+
+.dia-bau-cua-container .nut-game.reset-game {
+    top: 90%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.dia-bau-cua-container .reset-game:active {
+    width: 120px;
+    height: 48px;
+}
+
+.dia-bau-cua-container .nut-game.play-game:focus {
+    box-shadow: none;
+}
+
+.dia-bau-cua-container .nut-game.play-game img {
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+
+
+/* Các mặt của xúc xắc */
+.scene {
+    width: 50px;
+    height: 50px;
+    /* margin-top: 80px; */
+    perspective: 50px;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: infinite;
+    transform: translateZ(-25px);
+}
+
+
+.cube__face {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    line-height: 40px;
+    font-size: 5px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+
+.front {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateZ(25px);
+}
+
+.right {
+    transform: rotateY(90deg) rotateX(0deg) rotateZ(0deg) translateZ(25px);
+}
+
+.back {
+    transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg) translateZ(25px);
+}
+
+.left {
+    transform: rotateY(-90deg) rotateX(0deg) rotateZ(0deg) translateZ(25px);
+}
+
+.top {
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translateZ(25px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) rotateY(0deg) rotate(0deg) translateZ(25px);
+}
